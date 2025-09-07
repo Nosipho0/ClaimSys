@@ -1,0 +1,39 @@
+﻿@model List<ClaimSys.Models.Claim>
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Claim History";
+}
+
+<h2>Your Claim History</h2>
+
+@if (Model == null || Model.Count == 0)
+{
+    <p class="muted">No claims submitted yet.</p>
+}
+else
+{
+    <table class="claims-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Date Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.Id</td>
+                    <td>@claim.Title</td>
+                    <td>@claim.Description</td>
+                    <td>@claim.Amount</td>
+                    <td>@claim.DateSubmitted.ToString("yyyy-MM-dd HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

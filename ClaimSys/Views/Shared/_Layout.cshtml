@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - ClaimSys</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="brand">ClaimSys</a>
+        <div class="links">
+            @if (Context.Session.GetString("Username") == null)
+            {
+                <a href="/Account/Login">Login</a>
+                <a href="/Account/Register">Register</a>
+            }
+            else
+            {
+                <a href="/Home/Index">Dashboard</a>
+                <a href="/Claims/Create">Submit Claim</a>
+                <a href="/Claims/History">Claim History</a>
+                <a href="/Account/Logout">Logout (@Context.Session.GetString("Username"))</a>
+            }
+        </div>
+    </nav>
+
+    <main class="content">
+        @RenderBody()
+    </main>
+</body>
+</html>

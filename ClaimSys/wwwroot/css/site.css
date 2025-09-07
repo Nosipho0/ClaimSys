@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: #333;
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar .brand {
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar .links a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+    }
+
+.auth-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+    .auth-form label {
+        margin-top: 10px;
+    }
+
+    .auth-form input, .auth-form select, .auth-form textarea {
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+    .auth-form button {
+        margin-top: 15px;
+        padding: 10px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+        .auth-form button:hover {
+            background: #1d4ed8;
+        }
+
+.claims-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+    .claims-table th, .claims-table td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #e5e7eb;
+        text-align: left;
+    }
+
+    .claims-table th {
+        background: #f3f4f6;
+        font-weight: bold;
+    }
+
+    .claims-table tr:hover {
+        background: #f9fafb;
+    }
